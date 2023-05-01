@@ -10,7 +10,7 @@ body {
 	font-family: Roboto, sans-serif;
 	margin: auto;
 	padding: 20px;
-	max-width: 50%;
+	max-width: 70%;
 	text-align: left;
 	background-color: #152238;
 	word-wrap: break-word;
@@ -48,7 +48,7 @@ table {
 	width: 100%;
 }
 img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 code {
