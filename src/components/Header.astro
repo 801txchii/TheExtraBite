@@ -4,9 +4,14 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
+	<div class="img">
+		<img src="../../public/logo-transparent.png" alt="logo">
+	</div>
+
+	<div class="blankspace">
+		<h1></h1>
+	</div>
+
 	<nav>
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
@@ -15,11 +20,30 @@ import { SITE_TITLE } from '../consts';
 </header>
 <style>
 	header {
+		display: grid;
+		grid-template-columns: 1fr 3fr 2fr;
+	}
+	
+	.img {
+		grid-column: 1 / 2;
+	}
+
+	.blankspace {
+		grid-column: 2 / 3;
+	}
+
+	nav {
+		grid-column: 3 / 4;
+	}
+
+	.img, nav {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 	}
-	h2 {
-		margin: 0.5em 0;
+
+	img {
+		width: 75%;
+		height: auto;
 	}
 </style>
