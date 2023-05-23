@@ -71,3 +71,11 @@ blockquote {
 	margin: 0px;
 	font-style: italic;
 }
+
+h1 {
+	font-size: 5rem;
+}
+
+p {
+	font-size: 2rem;
+}

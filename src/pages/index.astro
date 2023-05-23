@@ -13,8 +13,46 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>Welcome to The Extra Bite</h1>
-			<p>This is the official website for YouTube channel The Extra Bite.</p>
+			<div class="description">
+				<h1>Welcome!</h1>
+				<p>Hi, my name is Fiddy, the brains behind the channel <strong><a href="https://youtube.com/@TheExtraBite" target="_blank">The Extra Bite</a></strong>. I'm a 16 year old YouTuber, and I love geography. I started this channel because I have a passion for geography, and I want to share it with the world.</p>
+
+				<br>
+
+				<p>This website is designed to be my personal one. I have some blog posts, and you can suggest an idea <strong><a href="/suggest">here</a></strong>. Thanks for visiting my site, and happy browsing!</p> 
+			</div>
+
+			<div class="img">
+				<img src="../public/earth.png" alt="">
+			</div>
+		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	a {
+		position: relative;
+		text-decoration: none;
+		color: white;
+	}
+
+	.img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	img {
+		width: 75%;
+	}
+</style>
