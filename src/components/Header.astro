@@ -16,13 +16,14 @@ import { SITE_TITLE } from '../consts';
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/suggest">Suggest An Idea</HeaderLink>
+		<HeaderLink href="/contact">Get In Touch</HeaderLink>
 		<HeaderLink href="https://youtube.com/@TheExtraBite" target="_blank">YouTube</HeaderLink>
 	</nav>
 </header>
 <style>
 	header {
 		display: grid;
-		grid-template-columns: 1fr 3fr 2fr;
+		grid-template-columns: 1fr 2fr 2fr;
 	}
 	
 	.img {
@@ -35,6 +36,7 @@ import { SITE_TITLE } from '../consts';
 
 	nav {
 		grid-column: 3 / 4;
+		font-size: 1.5rem;
 	}
 
 	.img, nav {
@@ -46,5 +48,19 @@ import { SITE_TITLE } from '../consts';
 	img {
 		width: 75%;
 		height: auto;
+	}
+
+	@media screen and (max-width: 1000px) {
+		.img {
+			grid-column: 1 / 4;
+		}
+
+		.blankspace {
+			visibility: hidden;
+		}
+		
+		nav {
+			grid-column: 1 / 4;
+		}
 	}
 </style>
