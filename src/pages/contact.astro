@@ -8,26 +8,26 @@ import { SITE_TITLE } from '../consts';
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead title="Suggest an idea" description='Suggest and idea for me to use in one of my videos' />
+		<BaseHead title="Contact Me" description='Contact me' />
 	</head>
 	<body>
         <Header title={SITE_TITLE}/>
-        <!-- <h1>Get In Touch</h1>
-		<form action="mailto:theextrabite@gmail.com" method="get" enctype="text/plain">
+        <h1>Contact</h1>
+		<form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="b964b38f-6f24-4593-b501-ae203b332ce8">
+            <input type="hidden" name="from_name" value="The Extra Bite">
+
             <input type="text" name="name" placeholder="Your Name" required> 
             <br>
             <input type="email" name="email" placeholder="Your Email" required>
             <br>
-            <input type="text" name="subject" placeholder="Subject" required>
+            <input type="text" name="title" placeholder="Subject" required>
             <br>
             <textarea name="textarea" name="textarea" placeholder="Your Text" required></textarea>
             <br>
-            <input type="submit" value="Send">
-        </form> -->
-
-        <h1>Want to get in touch?</h1>
-
-        <p>My email: theextrabite@gmail.com</p>
+            <input type="hidden" name="redirect" value="https://theextrabite.vercel.app/success">
+            <button type="submit">Send</button>
+        </form>
 		<Footer />
 	</body>
 </html>
@@ -40,12 +40,15 @@ import { SITE_TITLE } from '../consts';
     }
 
     input, textarea {
-        width: 50rem;
+        width: 100%;
         margin: 1rem 0;
         height: 3rem;
         font-size: 2rem;
         padding: .5rem;
         font-family: Roboto, sans-serif;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
     }
 
     textarea {
@@ -55,5 +58,21 @@ import { SITE_TITLE } from '../consts';
     input::placeholder, textarea::placeholder {
         font-size: 2rem;
         padding: .5rem;
+        color: white;
+    }
+
+    button {
+        background-color: transparent;
+        border: 2px solid white;
+        height: 4rem;
+        width: 102%;
+        color: white;
+        transition: .2s;
+        font-size: 2rem;
+    }
+
+    button:hover {
+        background-color: white;
+        color: black;
     }
 </style>
